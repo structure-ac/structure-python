@@ -1,4 +1,5 @@
 configVersion: 1.0.0
+author: structure
 management:
   docChecksum: 88d5e622fe7f2c5d5c2d89ae8bc229c9
   docVersion: "1.0"
