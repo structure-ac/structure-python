@@ -5,6 +5,7 @@ from . import utils
 from sdk.models import operations
 
 class Companies:
+    r"""Companies"""
     _client: requests_http.Session
     _security_client: requests_http.Session
     _server_url: str
@@ -20,53 +21,7 @@ class Companies:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
-    def company_employees(self, request: operations.CompanyEmployeesRequest) -> operations.CompanyEmployeesResponse:
-        r"""Show company employees"""
-        base_url = self._server_url
-        
-        url = utils.generate_url(operations.CompanyEmployeesRequest, base_url, '/companies/{id}/employees', request)
-        
-        query_params = utils.get_query_params(operations.CompanyEmployeesRequest, request)
-        
-        client = self._security_client
-        
-        http_res = client.request('GET', url, params=query_params)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.CompanyEmployeesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, '*/*'):
-                res.body = http_res.content
-        elif http_res.status_code in [401, 403, 404]:
-            pass
-
-        return res
-
-    def company_jobs(self, request: operations.CompanyJobsRequest) -> operations.CompanyJobsResponse:
-        r"""Show company jobs"""
-        base_url = self._server_url
-        
-        url = utils.generate_url(operations.CompanyJobsRequest, base_url, '/companies/{id}/jobs', request)
-        
-        query_params = utils.get_query_params(operations.CompanyJobsRequest, request)
-        
-        client = self._security_client
-        
-        http_res = client.request('GET', url, params=query_params)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.CompanyJobsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, '*/*'):
-                res.body = http_res.content
-        elif http_res.status_code in [401, 403, 404]:
-            pass
-
-        return res
-
-    def enrich_company(self, request: operations.EnrichCompanyRequest) -> operations.EnrichCompanyResponse:
+    def enrich(self, request: operations.EnrichCompanyRequest) -> operations.EnrichCompanyResponse:
         r"""Enrich a company profile"""
         base_url = self._server_url
         
@@ -89,7 +44,53 @@ class Companies:
 
         return res
 
-    def search_companies(self, request: operations.SearchCompaniesApplicationJSON) -> operations.SearchCompaniesResponse:
+    def list_employees(self, request: operations.ListEmployeesRequest) -> operations.ListEmployeesResponse:
+        r"""List company employees"""
+        base_url = self._server_url
+        
+        url = utils.generate_url(operations.ListEmployeesRequest, base_url, '/companies/{id}/employees', request)
+        
+        query_params = utils.get_query_params(operations.ListEmployeesRequest, request)
+        
+        client = self._security_client
+        
+        http_res = client.request('GET', url, params=query_params)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.ListEmployeesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, '*/*'):
+                res.body = http_res.content
+        elif http_res.status_code in [401, 403, 404]:
+            pass
+
+        return res
+
+    def list_jobs(self, request: operations.ListJobsRequest) -> operations.ListJobsResponse:
+        r"""List company jobs"""
+        base_url = self._server_url
+        
+        url = utils.generate_url(operations.ListJobsRequest, base_url, '/companies/{id}/jobs', request)
+        
+        query_params = utils.get_query_params(operations.ListJobsRequest, request)
+        
+        client = self._security_client
+        
+        http_res = client.request('GET', url, params=query_params)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.ListJobsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, '*/*'):
+                res.body = http_res.content
+        elif http_res.status_code in [401, 403, 404]:
+            pass
+
+        return res
+
+    def search(self, request: operations.SearchCompaniesApplicationJSON) -> operations.SearchCompaniesResponse:
         r"""Search Companies"""
         base_url = self._server_url
         

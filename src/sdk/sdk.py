@@ -3,10 +3,9 @@
 import requests as requests_http
 from . import utils
 from .accounts import Accounts
-from .auths import Auths
 from .companies import Companies
-from .me import Me
 from .people import People
+from .user import User
 from sdk.models import shared
 
 SERVERS = [
@@ -17,16 +16,19 @@ SERVERS = [
 class SDK:
     r"""Structure provides company and people data. Use our dataset of 700 million people and 24 million companies to build products, enrich person profiles, power predictive modeling/ai, analysis, and more."""
     accounts: Accounts
-    auths: Auths
+    r"""Accounts"""
     companies: Companies
-    me: Me
+    r"""Companies"""
     people: People
+    r"""People"""
+    user: User
+    r"""User"""
 
     _client: requests_http.Session
     _security_client: requests_http.Session
     _server_url: str = SERVERS[0]
     _language: str = "python"
-    _sdk_version: str = "1.0.0"
+    _sdk_version: str = "0.0.1"
     _gen_version: str = "2.16.7"
 
     def __init__(self,
@@ -73,15 +75,6 @@ class SDK:
             self._gen_version
         )
         
-        self.auths = Auths(
-            self._client,
-            self._security_client,
-            self._server_url,
-            self._language,
-            self._sdk_version,
-            self._gen_version
-        )
-        
         self.companies = Companies(
             self._client,
             self._security_client,
@@ -91,7 +84,7 @@ class SDK:
             self._gen_version
         )
         
-        self.me = Me(
+        self.people = People(
             self._client,
             self._security_client,
             self._server_url,
@@ -100,7 +93,7 @@ class SDK:
             self._gen_version
         )
         
-        self.people = People(
+        self.user = User(
             self._client,
             self._security_client,
             self._server_url,

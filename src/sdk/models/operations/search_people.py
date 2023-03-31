@@ -10,7 +10,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class SearchSearchApplicationJSON:
+class SearchPeopleApplicationJSON:
     
     filter: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter'), 'exclude': lambda f: f is None }})
     r"""Filter for searching"""  
@@ -23,7 +23,7 @@ class SearchSearchApplicationJSON:
     
 
 @dataclasses.dataclass
-class SearchSearchResponse:
+class SearchPeopleResponse:
     
     content_type: str = dataclasses.field()  
     status_code: int = dataclasses.field()  

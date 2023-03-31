@@ -16,12 +16,19 @@ from sdk.models import operations, shared
 
 s = sdk.SDK(
     security=shared.Security(
-        bearer_auth="YOUR_API_KEY",
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
 
+
+req = operations.EnrichCompanyRequest(
+    country_code="corrupti",
+    headquarters="provident",
+    id="distinctio",
+    name="quibusdam",
+)
     
-res = s.accounts.accounts()
+res = s.companies.enrich(req)
 
 if res.body is not None:
     # handle response
@@ -34,27 +41,24 @@ if res.body is not None:
 
 ### accounts
 
-* `accounts` - Show current user accounts
-
-### auths
-
-* `auths` - Login user
+* `list_users` - Show current user accounts
 
 ### companies
 
-* `company_employees` - Show company employees
-* `company_jobs` - Show company jobs
-* `enrich_company` - Enrich a company profile
-* `search_companies` - Search Companies
-
-### me
-
-* `me` - Show current user
+* `enrich` - Enrich a company profile
+* `list_employees` - List company employees
+* `list_jobs` - List company jobs
+* `search` - Search Companies
 
 ### people
 
-* `enrich_person` - Enrich a person profile
-* `search_search` - Search People
+* `enrich` - Enrich a person profile
+* `search` - Search People
+
+### user
+
+* `login` - Login user
+* `me` - Show current user
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -7,7 +7,7 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class CompanyEmployeesRequest:
+class ListEmployeesRequest:
     
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the company"""  
@@ -18,7 +18,7 @@ class CompanyEmployeesRequest:
     
 
 @dataclasses.dataclass
-class CompanyEmployeesResponse:
+class ListEmployeesResponse:
     
     content_type: str = dataclasses.field()  
     status_code: int = dataclasses.field()  
