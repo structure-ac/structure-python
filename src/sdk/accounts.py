@@ -5,6 +5,7 @@ from . import utils
 from sdk.models import operations
 
 class Accounts:
+    r"""Accounts"""
     _client: requests_http.Session
     _security_client: requests_http.Session
     _server_url: str
@@ -20,7 +21,7 @@ class Accounts:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
-    def accounts(self) -> operations.AccountsResponse:
+    def list_users(self) -> operations.ListUsersResponse:
         r"""Show current user accounts"""
         base_url = self._server_url
         
@@ -32,7 +33,7 @@ class Accounts:
         http_res = client.request('GET', url)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.AccountsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListUsersResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, '*/*'):

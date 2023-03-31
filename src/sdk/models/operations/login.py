@@ -10,7 +10,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class AuthsApplicationJSON:
+class LoginApplicationJSON:
     
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     r"""The email of the user"""  
@@ -19,7 +19,7 @@ class AuthsApplicationJSON:
     
 
 @dataclasses.dataclass
-class AuthsResponse:
+class LoginResponse:
     
     content_type: str = dataclasses.field()  
     status_code: int = dataclasses.field()  

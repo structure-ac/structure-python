@@ -5,6 +5,7 @@ from . import utils
 from sdk.models import operations
 
 class People:
+    r"""People"""
     _client: requests_http.Session
     _security_client: requests_http.Session
     _server_url: str
@@ -20,7 +21,7 @@ class People:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
-    def enrich_person(self, request: operations.EnrichPersonRequest) -> operations.EnrichPersonResponse:
+    def enrich(self, request: operations.EnrichPersonRequest) -> operations.EnrichPersonResponse:
         r"""Enrich a person profile"""
         base_url = self._server_url
         
@@ -43,7 +44,7 @@ class People:
 
         return res
 
-    def search_search(self, request: operations.SearchSearchApplicationJSON) -> operations.SearchSearchResponse:
+    def search(self, request: operations.SearchPeopleApplicationJSON) -> operations.SearchPeopleResponse:
         r"""Search People"""
         base_url = self._server_url
         
@@ -59,7 +60,7 @@ class People:
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.SearchSearchResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.SearchPeopleResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, '*/*'):

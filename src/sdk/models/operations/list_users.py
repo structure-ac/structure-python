@@ -7,7 +7,7 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class AccountsResponse:
+class ListUsersResponse:
     
     content_type: str = dataclasses.field()  
     status_code: int = dataclasses.field()  
