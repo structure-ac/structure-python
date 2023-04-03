@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install Structure
+pip install structure_py
 ```
 <!-- End SDK Installation -->
 
