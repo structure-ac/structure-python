@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-pip install git+https://github.com/structure-ac/structure-python.git
+pip install Structure
 ```
 <!-- End SDK Installation -->
 
