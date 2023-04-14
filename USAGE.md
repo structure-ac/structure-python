@@ -11,10 +11,10 @@ s = sdk.SDK(
 
 
 req = operations.EnrichCompanyRequest(
-    country_code="corrupti",
+    country_code="MA",
     headquarters="provident",
-    id="distinctio",
-    name="quibusdam",
+    id="bd9d8d69-a674-4e0f-867c-c8796ed151a0",
+    name="Estelle Will",
 )
     
 res = s.companies.enrich(req)
