@@ -9,14 +9,8 @@ from typing import Optional
 @dataclasses.dataclass
 class EnrichCompanyRequest:
     
-    country_code: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'country_code', 'style': 'form', 'explode': True }})
-    r"""Country code of the company"""  
-    headquarters: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'headquarters', 'style': 'form', 'explode': True }})
-    r"""The headquarters of the company"""  
-    id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the company"""  
-    name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
-    r"""Game of the company"""  
     
 
 @dataclasses.dataclass

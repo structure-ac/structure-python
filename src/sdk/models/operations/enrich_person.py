@@ -9,7 +9,7 @@ from typing import Optional
 @dataclasses.dataclass
 class EnrichPersonRequest:
     
-    id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'id', 'style': 'form', 'explode': True }})
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""LinkedIn ID of the person"""  
     
 
