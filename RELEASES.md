@@ -55,7 +55,6 @@ Based on:
 - Speakeasy CLI 1.19.7 (2.17.9) https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [PyPI v0.1.1] https://pypi.org/project/structure_py/0.1.1 - .
-
 ## 2023-04-20 16:05:56
 ### Changes
 Based on:
