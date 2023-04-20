@@ -25,13 +25,12 @@ class Companies:
         r"""Enrich a company profile"""
         base_url = self._server_url
         
-        url = base_url.removesuffix('/') + '/companies/enrich'
+        url = utils.generate_url(operations.EnrichCompanyRequest, base_url, '/companies/{id}/enrich', request)
         
-        query_params = utils.get_query_params(operations.EnrichCompanyRequest, request)
         
         client = self._security_client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.EnrichCompanyResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

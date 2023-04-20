@@ -46,6 +46,8 @@ class Company:
     r"""The company's name"""  
     organization_type: str = dataclasses.field()
     r"""The type of organization"""  
+    profiles: list[str] = dataclasses.field()
+    r"""The company's profiles"""  
     region: str = dataclasses.field()
     r"""The comapny's headquarters region"""  
     similar: list[str] = dataclasses.field()

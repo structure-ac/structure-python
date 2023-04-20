@@ -25,13 +25,12 @@ class People:
         r"""Enrich a person profile"""
         base_url = self._server_url
         
-        url = base_url.removesuffix('/') + '/people/enrich'
+        url = utils.generate_url(operations.EnrichPersonRequest, base_url, '/people/{id}/enrich', request)
         
-        query_params = utils.get_query_params(operations.EnrichPersonRequest, request)
         
         client = self._security_client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.EnrichPersonResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
