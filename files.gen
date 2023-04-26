@@ -25,4 +25,9 @@ src/sdk/models/shared/company.py
 src/sdk/models/shared/person.py
 src/sdk/models/shared/security.py
 src/sdk/models/shared/__init__.py
+docs/sdk/README.md
+docs/accounts/README.md
+docs/companies/README.md
+docs/people/README.md
+docs/user/README.md
 USAGE.md

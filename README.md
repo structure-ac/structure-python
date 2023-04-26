@@ -29,7 +29,7 @@ Authentication with the Structure API is using OAuth2. When establishing a conne
 <!-- Start SDK Example Usage -->
 ```python
 import sdk
-from sdk.models import operations, shared
+from sdk.models import operations
 
 s = sdk.SDK(
     security=shared.Security(
@@ -41,7 +41,7 @@ s = sdk.SDK(
 req = operations.EnrichCompanyRequest(
     id="89bd9d8d-69a6-474e-8f46-7cc8796ed151",
 )
-    
+
 res = s.companies.enrich(req)
 
 if res.body is not None:
@@ -53,26 +53,26 @@ if res.body is not None:
 ## Available Resources and Operations
 
 
-### accounts
+### [accounts](docs/accounts/README.md)
 
-* `list_users` - Show current user accounts
+* [list_users](docs/accounts/README.md#list_users) - Show current user accounts
 
-### companies
+### [companies](docs/companies/README.md)
 
-* `enrich` - Enrich a company profile
-* `list_employees` - List company employees
-* `list_jobs` - List company jobs
-* `search` - Search Companies
+* [enrich](docs/companies/README.md#enrich) - Enrich a company profile
+* [list_employees](docs/companies/README.md#list_employees) - List company employees
+* [list_jobs](docs/companies/README.md#list_jobs) - List company jobs
+* [search](docs/companies/README.md#search) - Search Companies
 
-### people
+### [people](docs/people/README.md)
 
-* `enrich` - Enrich a person profile
-* `search` - Search People
+* [enrich](docs/people/README.md#enrich) - Enrich a person profile
+* [search](docs/people/README.md#search) - Search People
 
-### user
+### [user](docs/user/README.md)
 
-* `login` - Login user
-* `me` - Show current user
+* [login](docs/user/README.md#login) - Login user
+* [me](docs/user/README.md#me) - Show current user
 <!-- End SDK Available Operations -->
 
 ### Maturity
