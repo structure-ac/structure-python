@@ -8,17 +8,24 @@ import dataclasses
 class Account:
     
     account_users: list[str] = dataclasses.field()
-    r"""List of the users in the account"""  
+
+    r"""List of the users in the account"""
     created_at: str = dataclasses.field()
-    r"""Timestamp of the account creation date"""  
+
+    r"""Timestamp of the account creation date"""
     id: float = dataclasses.field()
-    r"""The id of the account"""  
+
+    r"""The id of the account"""
     name: str = dataclasses.field()
-    r"""The name of the account"""  
+
+    r"""The name of the account"""
     owner_id: float = dataclasses.field()
-    r"""The id of the account owner"""  
+
+    r"""The id of the account owner"""
     personal: bool = dataclasses.field()
-    r"""If the account is personal or belonging to another account"""  
+
+    r"""If the account is personal or belonging to another account"""
     updated_at: str = dataclasses.field()
-    r"""Timestamp of the last account update date"""  
+
+    r"""Timestamp of the last account update date"""
     

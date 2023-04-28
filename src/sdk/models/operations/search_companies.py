@@ -13,20 +13,28 @@ from typing import Optional
 class SearchCompaniesApplicationJSON:
     
     filter: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter'), 'exclude': lambda f: f is None }})
-    r"""Filter for searching"""  
+
+    r"""Filter for searching"""
     limit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('limit'), 'exclude': lambda f: f is None }})
-    r"""Number of results per page (0-100) default 10"""  
+
+    r"""Number of results per page (0-100) default 10"""
     page: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('page'), 'exclude': lambda f: f is None }})
-    r"""The offset number to start at"""  
+
+    r"""The offset number to start at"""
     query: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query'), 'exclude': lambda f: f is None }})
-    r"""Query for searching"""  
+
+    r"""Query for searching"""
     
 
 @dataclasses.dataclass
 class SearchCompaniesResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    body: Optional[bytes] = dataclasses.field(default=None)  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
+    body: Optional[bytes] = dataclasses.field(default=None)
+
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     
