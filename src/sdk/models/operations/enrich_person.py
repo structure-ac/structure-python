@@ -10,7 +10,6 @@ from typing import Optional
 class EnrichPersonRequest:
     
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-
     r"""LinkedIn ID of the person"""
     
 
@@ -18,11 +17,7 @@ class EnrichPersonRequest:
 class EnrichPersonResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     body: Optional[bytes] = dataclasses.field(default=None)
-
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

@@ -13,10 +13,8 @@ from typing import Optional
 class LoginApplicationJSON:
     
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
-
     r"""The email of the user"""
     password: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('password') }})
-
     r"""The password of the user"""
     
 
@@ -24,11 +22,7 @@ class LoginApplicationJSON:
 class LoginResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     body: Optional[bytes] = dataclasses.field(default=None)
-
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     
