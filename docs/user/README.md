@@ -27,8 +27,8 @@ s = sdk.SDK(
 
 
 req = operations.LoginApplicationJSON(
-    email="Kenny50@yahoo.com",
-    password="rem",
+    email='Kenny50@yahoo.com',
+    password='rem',
 )
 
 res = s.user.login(req)

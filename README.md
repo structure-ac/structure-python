@@ -39,7 +39,7 @@ s = sdk.SDK(
 
 
 req = operations.EnrichCompanyRequest(
-    id="89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    id='89bd9d8d-69a6-474e-8f46-7cc8796ed151',
 )
 
 res = s.companies.enrich(req)

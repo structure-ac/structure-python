@@ -27,7 +27,7 @@ s = sdk.SDK(
 
 
 req = operations.EnrichPersonRequest(
-    id="d019da1f-fe78-4f09-bb00-74f15471b5e6",
+    id='d019da1f-fe78-4f09-bb00-74f15471b5e6',
 )
 
 res = s.people.enrich(req)
@@ -54,10 +54,10 @@ s = sdk.SDK(
 
 
 req = operations.SearchPeopleApplicationJSON(
-    filter="repudiandae",
-    limit="quae",
-    page="ipsum",
-    query="quidem",
+    filter='repudiandae',
+    limit='quae',
+    page='ipsum',
+    query='quidem',
 )
 
 res = s.people.search(req)

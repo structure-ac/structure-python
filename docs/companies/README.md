@@ -29,7 +29,7 @@ s = sdk.SDK(
 
 
 req = operations.EnrichCompanyRequest(
-    id="a05dfc2d-df7c-4c78-8a1b-a928fc816742",
+    id='a05dfc2d-df7c-4c78-8a1b-a928fc816742',
 )
 
 res = s.companies.enrich(req)
@@ -56,9 +56,9 @@ s = sdk.SDK(
 
 
 req = operations.ListEmployeesRequest(
-    id="cb739205-9293-496f-aa75-96eb10faaa23",
-    offset="corporis",
-    per_page="explicabo",
+    id='cb739205-9293-496f-aa75-96eb10faaa23',
+    offset='corporis',
+    per_page='explicabo',
 )
 
 res = s.companies.list_employees(req)
@@ -85,9 +85,9 @@ s = sdk.SDK(
 
 
 req = operations.ListJobsRequest(
-    id="c5955907-aff1-4a3a-afa9-467739251aa5",
-    offset="odit",
-    per_page="quo",
+    id='c5955907-aff1-4a3a-afa9-467739251aa5',
+    offset='odit',
+    per_page='quo',
 )
 
 res = s.companies.list_jobs(req)
@@ -114,10 +114,10 @@ s = sdk.SDK(
 
 
 req = operations.SearchCompaniesApplicationJSON(
-    filter="sequi",
-    limit="tenetur",
-    page="ipsam",
-    query="id",
+    filter='sequi',
+    limit='tenetur',
+    page='ipsam',
+    query='id',
 )
 
 res = s.companies.search(req)
