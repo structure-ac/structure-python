@@ -21,6 +21,7 @@ class Accounts:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def list_users(self) -> operations.ListUsersResponse:
         r"""Show current user accounts"""
         base_url = self._server_url

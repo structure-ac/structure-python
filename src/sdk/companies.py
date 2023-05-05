@@ -21,6 +21,7 @@ class Companies:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def enrich(self, request: operations.EnrichCompanyRequest) -> operations.EnrichCompanyResponse:
         r"""Enrich a company profile"""
         base_url = self._server_url
@@ -43,6 +44,7 @@ class Companies:
 
         return res
 
+    
     def list_employees(self, request: operations.ListEmployeesRequest) -> operations.ListEmployeesResponse:
         r"""List company employees"""
         base_url = self._server_url
@@ -66,6 +68,7 @@ class Companies:
 
         return res
 
+    
     def list_jobs(self, request: operations.ListJobsRequest) -> operations.ListJobsResponse:
         r"""List company jobs"""
         base_url = self._server_url
@@ -89,6 +92,7 @@ class Companies:
 
         return res
 
+    
     def search(self, request: operations.SearchCompaniesApplicationJSON) -> operations.SearchCompaniesResponse:
         r"""Search Companies"""
         base_url = self._server_url

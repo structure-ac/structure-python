@@ -21,6 +21,7 @@ class User:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def login(self, request: operations.LoginApplicationJSON) -> operations.LoginResponse:
         r"""Login user"""
         base_url = self._server_url
@@ -49,6 +50,7 @@ class User:
 
         return res
 
+    
     def me(self) -> operations.MeResponse:
         r"""Show current user"""
         base_url = self._server_url

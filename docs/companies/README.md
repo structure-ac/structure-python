@@ -27,7 +27,6 @@ s = sdk.SDK(
     ),
 )
 
-
 req = operations.EnrichCompanyRequest(
     id='a05dfc2d-df7c-4c78-8a1b-a928fc816742',
 )
@@ -53,7 +52,6 @@ s = sdk.SDK(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.ListEmployeesRequest(
     id='cb739205-9293-496f-aa75-96eb10faaa23',
@@ -83,7 +81,6 @@ s = sdk.SDK(
     ),
 )
 
-
 req = operations.ListJobsRequest(
     id='c5955907-aff1-4a3a-afa9-467739251aa5',
     offset='odit',
@@ -111,7 +108,6 @@ s = sdk.SDK(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.SearchCompaniesApplicationJSON(
     filter='sequi',

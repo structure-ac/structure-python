@@ -25,7 +25,6 @@ s = sdk.SDK(
     ),
 )
 
-
 req = operations.EnrichPersonRequest(
     id='d019da1f-fe78-4f09-bb00-74f15471b5e6',
 )
@@ -51,7 +50,6 @@ s = sdk.SDK(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.SearchPeopleApplicationJSON(
     filter='repudiandae',

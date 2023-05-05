@@ -21,6 +21,7 @@ class People:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def enrich(self, request: operations.EnrichPersonRequest) -> operations.EnrichPersonResponse:
         r"""Enrich a person profile"""
         base_url = self._server_url
@@ -43,6 +44,7 @@ class People:
 
         return res
 
+    
     def search(self, request: operations.SearchPeopleApplicationJSON) -> operations.SearchPeopleResponse:
         r"""Search People"""
         base_url = self._server_url
