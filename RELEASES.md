@@ -143,3 +143,11 @@ Based on:
 - Speakeasy CLI 1.29.2 (2.26.2) https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [PyPI v0.8.2] https://pypi.org/project/structure_py/0.8.2 - .
+
+## 2023-05-11 00:58:05
+### Changes
+Based on:
+- OpenAPI Doc 1.0 https://prod.speakeasyapi.dev/v1/apis/Structure/version/1.0.0/schema/download
+- Speakeasy CLI 1.30.0 (2.26.3) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v0.8.3] https://pypi.org/project/structure_py/0.8.3 - .
