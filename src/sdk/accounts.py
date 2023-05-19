@@ -28,6 +28,7 @@ class Accounts:
         
         url = base_url.removesuffix('/') + '/accounts'
         headers = {}
+        headers['Accept'] = '*/*'
         headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
