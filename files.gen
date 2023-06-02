@@ -3,6 +3,7 @@ src/sdk/companies.py
 src/sdk/people.py
 src/sdk/user.py
 src/sdk/sdk.py
+.gitignore
 pylintrc
 setup.py
 src/sdk/__init__.py
