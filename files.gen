@@ -1,3 +1,4 @@
+src/sdk/sdkconfiguration.py
 src/sdk/accounts.py
 src/sdk/companies.py
 src/sdk/people.py
