@@ -10,7 +10,7 @@ from sdk import utils
 from sdk.models import shared
 
 class SDK:
-    r"""Structure provides company and people data. Use our dataset of 700 million people and 24 million companies to build products, enrich person profiles, power predictive modeling/ai, analysis, and more."""
+    r"""Structure: Structure provides company and people data. Use our dataset of 700 million people and 24 million companies to build products, enrich person profiles, power predictive modeling/ai, analysis, and more."""
     accounts: Accounts
     r"""Accounts"""
     companies: Companies
