@@ -23,7 +23,7 @@ from sdk.models import operations
 
 s = sdk.SDK(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -49,7 +49,7 @@ from sdk.models import operations
 
 s = sdk.SDK(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -77,7 +77,7 @@ from sdk.models import operations
 
 s = sdk.SDK(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -105,7 +105,7 @@ from sdk.models import operations
 
 s = sdk.SDK(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
