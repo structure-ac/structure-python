@@ -10,4 +10,4 @@ from .me import *
 from .search_companies import *
 from .search_people import *
 
-__all__ = ["EnrichCompanyRequest","EnrichCompanyResponse","EnrichPersonRequest","EnrichPersonResponse","ListEmployeesRequest","ListEmployeesResponse","ListJobsRequest","ListJobsResponse","ListUsersResponse","LoginApplicationJSON","LoginResponse","MeResponse","SearchCompaniesApplicationJSON","SearchCompaniesResponse","SearchPeopleApplicationJSON","SearchPeopleResponse"]
+__all__ = ["EnrichCompanyRequest","EnrichCompanyResponse","EnrichPersonRequest","EnrichPersonResponse","ListEmployees200Wildcard","ListEmployeesRequest","ListEmployeesResponse","ListJobs200Wildcard","ListJobsRequest","ListJobsResponse","ListUsersResponse","Login200Wildcard","LoginApplicationJSON","LoginResponse","Me200Wildcard","MeResponse","SearchCompanies200Wildcard","SearchCompaniesApplicationJSON","SearchCompaniesResponse","SearchPeople200Wildcard","SearchPeopleApplicationJSON","SearchPeopleResponse"]

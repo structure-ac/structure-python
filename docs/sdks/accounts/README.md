@@ -30,3 +30,9 @@ res = s.accounts.list_users()
 if res.body is not None:
     # handle response
 ```
+
+
+### Response
+
+**[operations.ListUsersResponse](../../models/operations/listusersresponse.md)**
+

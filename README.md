@@ -52,26 +52,26 @@ if res.body is not None:
 ## Available Resources and Operations
 
 
-### [accounts](docs/accounts/README.md)
+### [accounts](docs/sdks/accounts/README.md)
 
-* [list_users](docs/accounts/README.md#list_users) - Show current user accounts
+* [list_users](docs/sdks/accounts/README.md#list_users) - Show current user accounts
 
-### [companies](docs/companies/README.md)
+### [companies](docs/sdks/companies/README.md)
 
-* [enrich](docs/companies/README.md#enrich) - Enrich a company profile
-* [list_employees](docs/companies/README.md#list_employees) - List company employees
-* [list_jobs](docs/companies/README.md#list_jobs) - List company jobs
-* [search](docs/companies/README.md#search) - Search Companies
+* [enrich](docs/sdks/companies/README.md#enrich) - Enrich a company profile
+* [list_employees](docs/sdks/companies/README.md#list_employees) - List company employees
+* [list_jobs](docs/sdks/companies/README.md#list_jobs) - List company jobs
+* [search](docs/sdks/companies/README.md#search) - Search Companies
 
-### [people](docs/people/README.md)
+### [people](docs/sdks/people/README.md)
 
-* [enrich](docs/people/README.md#enrich) - Enrich a person profile
-* [search](docs/people/README.md#search) - Search People
+* [enrich](docs/sdks/people/README.md#enrich) - Enrich a person profile
+* [search](docs/sdks/people/README.md#search) - Search People
 
-### [user](docs/user/README.md)
+### [user](docs/sdks/user/README.md)
 
-* [login](docs/user/README.md#login) - Login user
-* [me](docs/user/README.md#me) - Show current user
+* [login](docs/sdks/user/README.md#login) - Login user
+* [me](docs/sdks/user/README.md#me) - Show current user
 <!-- End SDK Available Operations -->
 
 ### Maturity

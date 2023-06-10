@@ -4,9 +4,9 @@ from __future__ import annotations
 import dataclasses
 
 
+
 @dataclasses.dataclass
 class Account:
-    
     account_users: list[str] = dataclasses.field()
     r"""List of the users in the account"""
     created_at: str = dataclasses.field()
@@ -22,3 +22,4 @@ class Account:
     updated_at: str = dataclasses.field()
     r"""Timestamp of the last account update date"""
     
+

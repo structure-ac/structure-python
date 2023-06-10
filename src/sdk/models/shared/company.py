@@ -4,10 +4,10 @@ from __future__ import annotations
 import dataclasses
 
 
+
 @dataclasses.dataclass
 class Company:
     r"""returns the company"""
-    
     about: str = dataclasses.field()
     r"""The company's description"""
     affiliated: list[str] = dataclasses.field()
@@ -65,3 +65,4 @@ class Company:
     website: str = dataclasses.field()
     r"""The company's website"""
     
+

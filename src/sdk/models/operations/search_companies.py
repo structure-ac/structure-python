@@ -9,9 +9,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SearchCompaniesApplicationJSON:
-    
     filter: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter'), 'exclude': lambda f: f is None }})
     r"""Filter for searching"""
     limit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('limit'), 'exclude': lambda f: f is None }})
@@ -22,11 +22,20 @@ class SearchCompaniesApplicationJSON:
     r"""Query for searching"""
     
 
+
+
+
+@dataclasses.dataclass
+class SearchCompanies200Wildcard:
+    pass
+
+
+
 @dataclasses.dataclass
 class SearchCompaniesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     body: Optional[bytes] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+
